@@ -31,19 +31,16 @@ describe('Navigation', () => {
 
   it('renders the logo link to home', () => {
     render(<Navigation />);
-    const logo = screen.getByRole('link', { name: /md/i });
+    const logo = screen.getByRole('link', { name: /lj/i });
     expect(logo).toHaveAttribute('href', '/');
   });
 
   it('renders navigation links for all non-index routes', () => {
     render(<Navigation />);
 
-    // Should have links for About, Resume, Writing, Stats, Contact, Archive
     expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /archive/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /writing/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /stats/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
   });
 
@@ -51,7 +48,6 @@ describe('Navigation', () => {
     mockPathname.mockReturnValue('/');
     render(<Navigation />);
 
-    // About link should not be active
     const aboutLink = screen.getByRole('link', { name: /about/i });
     expect(aboutLink).not.toHaveClass('active');
   });
@@ -76,7 +72,6 @@ describe('Navigation', () => {
   it('renders theme toggle and hamburger menu', () => {
     render(<Navigation />);
 
-    // Theme toggle should be present (placeholder initially due to SSR)
     const navActions = document.querySelector('.nav-actions');
     expect(navActions).toBeInTheDocument();
   });
