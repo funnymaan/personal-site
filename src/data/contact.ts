@@ -11,7 +11,7 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'https://github.com/funnyman',
+    link: 'https://github.com/funnymaan',
     label: 'GitHub',
     icon: faGithub,
   },

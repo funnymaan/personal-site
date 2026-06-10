@@ -3,7 +3,7 @@
  */
 
 // Site configuration
-export const SITE_URL = 'https://funnyman.github.io/personal-site/';
+export const SITE_URL = 'https://funnymaan.github.io/personal-site/';
 export const AUTHOR_NAME = '赖俊彦';
 export const TWITTER_HANDLE = '';
 
