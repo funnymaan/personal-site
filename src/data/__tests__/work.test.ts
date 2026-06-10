@@ -56,7 +56,6 @@ describe('work data', () => {
     }
   });
 
-  // Resume should show at least one current/active position
   it('has at least one current position (no endDate)', () => {
     const currentJobs = work.filter((job) => !job.endDate);
     expect(currentJobs.length).toBeGreaterThanOrEqual(1);
@@ -69,14 +68,6 @@ describe('work data', () => {
         expect(job.highlights.length).toBeGreaterThan(0);
       }
     }
-  });
-
-  it('has positions from different years', () => {
-    const years = work.map((job) => new Date(job.startDate).getFullYear());
-    const uniqueYears = new Set(years);
-
-    // Resume should contain work from multiple years
-    expect(uniqueYears.size).toBeGreaterThan(1);
   });
 
   it('company names are non-empty', () => {

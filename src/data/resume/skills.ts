@@ -12,115 +12,52 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Languages
+  // 编程语言
   {
-    title: 'Python',
-    competency: 5,
-    category: ['Languages', 'ML Engineering'],
+    title: 'C',
+    competency: 3,
+    category: ['编程语言'],
+  },
+  {
+    title: 'HTML & CSS',
+    competency: 3,
+    category: ['Web 开发'],
+  },
+  {
+    title: 'JavaScript',
+    competency: 2,
+    category: ['Web 开发'],
   },
   {
     title: 'TypeScript',
-    competency: 5,
-    category: ['Languages', 'Web Development'],
+    competency: 1,
+    category: ['Web 开发'],
   },
   {
-    title: 'SQL',
-    competency: 4,
-    category: ['Languages', 'Databases'],
+    title: 'Python',
+    competency: 1,
+    category: ['编程语言'],
   },
-  // AI & LLM
+  // 工具与框架
   {
-    title: 'AI Agents',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Prompt Engineering',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Pandas',
-    competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
-  },
-  // Web Development
-  {
-    title: 'Node.js',
-    competency: 5,
-    category: ['Web Development'],
-  },
-  {
-    title: 'FastAPI',
-    competency: 4,
-    category: ['Web Development'],
+    title: 'React',
+    competency: 1,
+    category: ['Web 开发'],
   },
   {
     title: 'Next.js',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  // Databases
-  {
-    title: 'PostgreSQL',
-    competency: 4,
-    category: ['Databases'],
+    competency: 1,
+    category: ['Web 开发'],
   },
   {
-    title: 'Redis',
-    competency: 3,
-    category: ['Databases'],
-  },
-  // Infrastructure
-  {
-    title: 'AWS',
-    competency: 4,
-    category: ['Infrastructure'],
+    title: 'Git',
+    competency: 2,
+    category: ['工具'],
   },
   {
-    title: 'Docker',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 3,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
+    title: 'Linux',
+    competency: 1,
+    category: ['工具'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

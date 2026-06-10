@@ -27,7 +27,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Member of the Technical Staff at OpenAI, working on Promptfoo and agent security. Previously co-founded Promptfoo, Arthena, and Matroid, and led engineering at Smile ID.';
+  '赖俊彦的个人网站——广东工业大学人工智能专业在读学生，探索 Web 开发与软件工程。';
 
 export const metadata: Metadata = {
   title: {
@@ -37,20 +37,18 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'OpenAI',
-    'Promptfoo',
-    'agent security',
-    'LLM security',
-    'machine learning',
-    'startup founder',
-    'YC',
+    '广东工业大学',
+    'Web 开发',
+    '人工智能',
+    '个人网站',
+    '学生',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'zh_CN',
     url: SITE_URL,
     siteName: AUTHOR_NAME,
     title: AUTHOR_NAME,

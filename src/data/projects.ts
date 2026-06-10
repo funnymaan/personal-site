@@ -11,40 +11,14 @@ export interface Project {
 
 const data: Project[] = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
-    desc: 'Connected to bank accounts to round up purchases and donate spare change to charity.',
-    tech: ['React', 'Node.js', 'Plaid API', 'MongoDB'],
+    title: '个人网站',
+    subtitle: '从零搭建的个人主页',
+    link: 'https://github.com/funnymaan/personal-site',
+    image: '/images/projects/personal-site.jpg',
+    date: '2026-06-09',
+    desc: '基于 Next.js 构建的个人网站，支持亮色/暗色主题切换，包含关于、简历、项目展示等页面。从零开始学习 Web 开发，这是第一个实践项目。',
+    tech: ['TypeScript', 'React', 'Next.js', 'CSS'],
     featured: true,
-  },
-  {
-    title: 'Harvest',
-    subtitle: '3rd place at Techcrunch Disrupt SF',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
-    desc: 'Low-cost crop monitoring to catch irrigation leaks and nutrient deficiencies.',
-    tech: ['Python', 'Arduino', 'Computer Vision', 'AWS'],
-    featured: true,
-  },
-  {
-    title: 'Space Potato',
-    subtitle: 'Kickstarter-funded weather balloon',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
-    desc: 'Potato-powered weather balloon with cameras. Photos published in a coffee table book.',
-    tech: ['Hardware', 'GPS', 'Photography'],
-  },
-  {
-    title: 'Cat Detector',
-    subtitle: 'CNN for cat breed classification',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
-    desc: 'Classified 60,000+ cats across 80 breeds before server costs shut it down.',
-    tech: ['Python', 'TensorFlow', 'CNN', 'AWS'],
   },
 ];
 

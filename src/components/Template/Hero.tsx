@@ -11,27 +11,19 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-title">
-          <span className="hero-name">Michael D&apos;Angelo</span>
+          <span className="hero-name">赖俊彦</span>
         </h1>
 
         <p className="hero-tagline">
-          Member of the Technical Staff at{' '}
-          <a href="https://openai.com" className="hero-highlight">
-            OpenAI
-          </a>
-          , where I work on{' '}
-          <a href="https://promptfoo.dev" className="hero-highlight">
-            Promptfoo
-          </a>{' '}
-          and agent security.
+          广东工业大学在读学生，热爱编程与开源技术。
           <br />
-          Previously co-founded, scaled, and sold Promptfoo to OpenAI.
+          专注于 Web 开发与软件工程，持续学习中。
         </p>
 
         <div className="hero-chips">
-          <span className="hero-chip">YC Alum</span>
-          <span className="hero-chip">Stanford ICME</span>
-          <span className="hero-chip">Co-founded Arthena & Matroid</span>
+          <span className="hero-chip">广东工业大学</span>
+          <span className="hero-chip">软件工程</span>
+          <span className="hero-chip">开源爱好者</span>
         </div>
 
         <div className="hero-cta">

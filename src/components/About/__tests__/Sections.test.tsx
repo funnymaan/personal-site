@@ -91,8 +91,12 @@ Lead paragraph.
 
     expect(within(nav).getAllByRole('link')).toHaveLength(sectionTitles.length);
 
-    for (const title of sectionTitles) {
-      const headingId = createHeadingId(title);
+    // Chinese headings all map to "section", so unique IDs are section, section-2, etc.
+    const sectionIds = ['section', 'section-2', 'section-3'];
+
+    for (let i = 0; i < sectionTitles.length; i++) {
+      const title = sectionTitles[i];
+      const headingId = sectionIds[i];
       const heading = screen.getByRole('heading', { name: title });
 
       expect(heading).toHaveAttribute('id', headingId);
@@ -111,10 +115,11 @@ Lead paragraph.
       <AboutContent markdown={aboutMarkdown} />,
     );
 
-    expect(html).toContain('href="#some-history"');
-    expect(html).toContain('id="some-history"');
-    expect(html).toContain('href="#travel-geography"');
-    expect(html).toContain('id="travel-geography"');
+    // Chinese headings use "section" as the fallback id
+    expect(html).toContain('href="#section"');
+    expect(html).toContain('id="section"');
+    expect(html).toContain('href="#section-2"');
+    expect(html).toContain('id="section-2"');
   });
 
   it('supports same-page hash navigation from section links', async () => {
@@ -124,30 +129,30 @@ Lead paragraph.
 
     const nav = screen.getByRole('navigation', { name: 'About sections' });
     const navLink = within(nav).getByRole('link', {
-      name: 'Travel / Geography',
+      name: '我喜欢',
     });
 
     navLink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#travel-geography');
+      expect(window.location.hash).toBe('#section-2');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Travel / Geography',
+      '我喜欢',
     );
 
-    const heading = screen.getByRole('heading', { name: 'Fun Facts' });
+    const heading = screen.getByRole('heading', { name: '我正在寻找' });
     const permalink = within(heading).getByRole('link', {
-      name: 'Fun Facts',
+      name: '我正在寻找',
     });
 
     permalink.click();
 
     await waitFor(() => {
-      expect(window.location.hash).toBe('#fun-facts');
+      expect(window.location.hash).toBe('#section-3');
     });
     expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Fun Facts',
+      '我正在寻找',
     );
   });
 });

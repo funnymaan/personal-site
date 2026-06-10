@@ -8,7 +8,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    "Learn about Michael D'Angelo - Member of the Technical Staff at OpenAI and builder across AI, security, and infrastructure.",
+    '了解赖俊彦——广东工业大学人工智能专业在读学生，探索 Web 开发与软件工程。',
   path: '/about/',
 });
 
