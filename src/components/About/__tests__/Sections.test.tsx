@@ -3,7 +3,6 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
 import { aboutMarkdown } from '@/data/about';
-import { createHeadingId } from '@/lib/anchors';
 import AboutContent from '../Sections';
 
 function getActualSectionTitles(markdown: string) {
